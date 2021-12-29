@@ -1,0 +1,4 @@
+select 
+    current_date, 
+    dateadd(d, -datepart(dow, current_date), current_date) AS week_start_sun,
+    dateadd(d, -datepart(dow, current_date) + 1, current_date) AS week_start_mon
